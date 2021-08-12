@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    Informations Classe
+{% endblock %}
+
+
+{% block container %}
+    <script type="text/javascript">
+        //<!--
+        function change_onglet(name)
+        {
+            document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
+            document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
+            document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
+            document.getElementById('contenu_onglet_'+name).style.display = 'block';
+            anc_onglet = name;
+        }
+        //-->
+    </script>
+
+    <h2> {{ classe.nom }} </h2>
+
+    <div class="systeme_onglets">
+        <div class="onglets">
+            <span class="onglet_0 onglet" id="onglet_infos1" onclick="javascript:change_onglet('infos1');">Information General</span>
+            <span class="onglet_0 onglet" id="onglet_infos2" onclick="javascript:change_onglet('infos2');">Eleves</span>
+            <span class="onglet_0 onglet" id="onglet_infos3" onclick="javascript:change_onglet('infos3');">Cours</span>
+        </div>
+
+        <div class="contenu_onglets">
+
+            <div class="contenu_onglet" id="contenu_onglet_infos1">
+                <p class="card-text">Niveau de la classe : {{ classe.niveau }}</p>
+                <p class="card-text">Professeur principal : {{ professeur.nom }} {{ professeur.prenom }} </p>
+            </div>
+
+            <div class="contenu_onglet" id="contenu_onglet_infos2">
+                <ul>Eleves de la classe :
+                    {% for eleve in eleves %}
+                        <li> {{ eleve.0 }} {{ eleve.1 }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="contenu_onglet" id="contenu_onglet_infos3">
+
+                    {% for value in cours %}
+                        <p>Le cours : {{ value.0 }} <br>
+                        a été fait par {{ value.1 }} {{ value.2 }}</p>
+                    {% endfor %}
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<!--
+        var anc_onglet = 'infos1';
+        change_onglet(anc_onglet);
+        //-->
+    </script>
+
+
+
+{% endblock %}

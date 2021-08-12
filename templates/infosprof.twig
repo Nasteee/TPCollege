@@ -1,0 +1,70 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    Informations Professeur
+{% endblock %}
+
+
+{% block container %}
+    <script type="text/javascript">
+        //<!--
+        function change_onglet(name)
+        {
+            document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
+            document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
+            document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
+            document.getElementById('contenu_onglet_'+name).style.display = 'block';
+            anc_onglet = name;
+        }
+        //-->
+    </script>
+
+    <h2> {{ professeur.nom }} {{ professeur.prenom }} </h2>
+
+    <div class="systeme_onglets">
+        <div class="onglets">
+            <span class="onglet_0 onglet" id="onglet_infos1" onclick="javascript:change_onglet('infos1');">Information General</span>
+            <span class="onglet_0 onglet" id="onglet_infos2" onclick="javascript:change_onglet('infos2');">Contact</span>
+            <span class="onglet_0 onglet" id="onglet_infos3" onclick="javascript:change_onglet('infos3');">Information College</span>
+        </div>
+
+        <div class="contenu_onglets">
+
+            <div class="contenu_onglet" id="contenu_onglet_infos1">
+                <p class="card-text">Date de naissance : {{ professeur.dateNaissance | date('d/m/Y') }}</p>
+                <p class="card-text">Age : {{ professeur.age }}</p>
+            </div>
+
+            <div class="contenu_onglet" id="contenu_onglet_infos2">
+                <p class="card-text">Adresse : {{ professeur.adresse}}</p>
+                <p class="card-text">Email : {{ professeur.email}}</p>
+                <p class="card-text">N° de telephone : {{ professeur.telephone }}</p>
+            </div>
+
+            <div class="contenu_onglet" id="contenu_onglet_infos3">
+                <p>Date d'entree en fonction : {{ professeur.dateEntre }}</p>
+                {% if classe %}
+                <p>Responsable de la classe : {{ classe.nom }}</p>
+                {% else %}
+                    <p>Le professeur n'est reponsable d'aucune classe</p>
+                {% endif %}
+                <ul>Matière enseigné :
+                {% for key, value in matiere %}
+                    <li> {{ value.nom }} </li>
+                {% endfor %}
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<!--
+        var anc_onglet = 'infos1';
+        change_onglet(anc_onglet);
+        //-->
+    </script>
+
+
+
+{% endblock %}

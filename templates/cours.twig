@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    Cours
+{% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        {% for moncours in cours %}
+
+            <div class="card col-md-2" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ moncours.nom }}</h5>
+                    <a href="infoscours.php?id={{ moncours.id }}" class="btn btn-primary">Plus d'infos</a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}

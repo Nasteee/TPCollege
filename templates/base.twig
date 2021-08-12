@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP College - {% block title %} {% endblock %}</title>
+  {% block stylesheet %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  {% endblock %}
+</head>
+<body>
+{% block menu %}
+
+  <ul class="nav justify-content-center mb-5 mt-5">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="index1.php"><button type="button" class="btn btn-outline-dark">Accueil</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="professeurs.php"><button type="button" class="btn btn-outline-dark">Professeurs</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="eleves.php"> <button type="button" class="btn btn-outline-dark">Eleves</button> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="matieres.php"><button type="button" class="btn btn-outline-dark">Matieres</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="cours.php"><button type="button" class="btn btn-outline-dark">Cours</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="evaluations.php"><button type="button" class="btn btn-outline-dark">Evaluations</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="classes.php"><button type="button" class="btn btn-outline-dark">Classes </button></a>
+    </li>
+  </ul>
+
+
+
+{% endblock %}
+<div class="container">
+  {% block container %}  {% endblock %}
+</div>
+
+<div class="footer">
+  {% block footer %}  {% endblock %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

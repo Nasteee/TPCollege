@@ -1,0 +1,17 @@
+{
+    "name": "naste/tp-college",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guillaume",
+            "email": "designed@live.fr"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}

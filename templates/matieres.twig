@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    Matières
+{% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        {% for matiere in matieres %}
+
+            <div class="card col-md-2" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ matiere.nom }} </h5>
+                    <a href="infosmatiere.php?id={{ matiere.id }}" class="btn btn-primary">Plus d'infos</a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}
