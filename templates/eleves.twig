@@ -6,17 +6,13 @@
 
 {% block container %}
 
+
     <div class="row">
-        {% for eleve in eleves %}
-
-            <div class="card col-md-2" >
-                <div class="card-body">
-                    <h5 class="card-title">{{ eleve.nom }} {{ eleve.prenom }}</h5>
-                    <a href="infoseleve.php?id={{ eleve.id }}" class="btn btn-primary">Plus d'infos</a>
-                </div>
-            </div>
-
-        {% endfor %}
+        <div class="list-group">
+            {% for eleve in eleves %}
+                <a href="infoseleve.php?id={{ eleve.id }}" class="list-group-item list-group-item-action">{{ eleve.nom }} {{ eleve.prenom }}</a>
+            {% endfor %}
+        </div>
     </div>
 
 

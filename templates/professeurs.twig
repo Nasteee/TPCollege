@@ -8,17 +8,13 @@
 
 
     <div class="row">
-        {% for professeur in professeurs %}
-
-            <div class="card col-md-2" >
-                <div class="card-body">
-                    <h5 class="card-title">{{ professeur.nom }} {{ professeur.prenom }}</h5>
-                    <a href="infosprof.php?id={{ professeur.id }}" class="btn btn-primary">Plus d'infos</a>
-                </div>
-            </div>
-
-        {% endfor %}
+        <div class="list-group">
+            {% for professeur in professeurs %}
+                <a href="infosprof.php?id={{ professeur.id }}" class="list-group-item list-group-item-action">{{ professeur.nom }} {{ professeur.prenom }}</a>
+            {% endfor %}
+        </div>
     </div>
+
 
 
 {% endblock %}

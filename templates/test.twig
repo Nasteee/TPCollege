@@ -1,0 +1,14 @@
+{% extends "baselist.twig" %}
+
+{% block categorie %}
+Professeur
+{% endblock %}
+
+
+{% block debutfor %}professeur{% endblock %}
+{% block finfor %}professeurs{% endblock %}
+
+{% block lien %}infosprof.php?id={{ professeur.id }}{% endblock %}
+
+{% block nom %}{{ professeur.nom }} {{ professeur.prenom }}{% endblock %}
+

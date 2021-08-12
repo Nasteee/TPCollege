@@ -1,42 +1,38 @@
-{% extends "base.twig" %}
+{% extends "baseinfos.twig" %}
 
 {% block title %}
-    Informations Eleve
+    Eleve
 {% endblock %}
 
 
-{% block container %}
-    <script type="text/javascript">
-        //<!--
-        function change_onglet(name)
-        {
-            document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
-            document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
-            document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
-            document.getElementById('contenu_onglet_'+name).style.display = 'block';
-            anc_onglet = name;
-        }
-        //-->
-    </script>
 
-    <h2> {{ eleve.nom }} {{ eleve.prenom }} </h2>
 
-    <div class="systeme_onglets">
-        <div class="onglets">
-            <span class="onglet_0 onglet" id="onglet_infos1" onclick="javascript:change_onglet('infos1');">Information General</span>
-            <span class="onglet_0 onglet" id="onglet_infos3" onclick="javascript:change_onglet('infos3');">Information College</span>
-        </div>
+  {% block nom %}
+      <h2> {{ eleve.nom }} {{ eleve.prenom }}</h2>
+  {% endblock %}
 
-        <div class="contenu_onglets">
+        {% block titreOnglet1 %}
+            Information General
+        {% endblock %}
 
-            <div class="contenu_onglet" id="contenu_onglet_infos1">
+            {% block dataOnglet1 %}
+
                 <p class="card-text">Date de naissance : {{ eleve.dateNaissance | date('d/m/Y') }}</p>
                 <p class="card-text">Adresse : {{ eleve.adresse }}</p>
                 <p class="card-text">Email : {{ eleve.email }}</p>
                 <p class="card-text">Telephone : {{ eleve.telephone }}</p>
-            </div>
 
-            <div class="contenu_onglet" id="contenu_onglet_infos3">
+            {% endblock %}
+
+
+
+
+        {% block titreOnglet2 %}
+            Information College
+        {% endblock %}
+
+            {% block dataOnglet2 %}
+
                 <p>Classe : {{ classe.nom }}</p>
 
                 {% if parrain == false %}
@@ -48,7 +44,7 @@
 
                 {% if evaluations %}
 
-                <table>
+                    <table>
                     <thead>
                     <td>Evaluations</td>
                     <td>Professeurs</td>
@@ -71,16 +67,11 @@
 
                 </table>
 
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        //<!--
-        var anc_onglet = 'infos1';
-        change_onglet(anc_onglet);
-        //-->
-    </script>
+            {% endblock %}
 
 
 
-{% endblock %}
+
+        {% block onglet3 %}
+
+        {% endblock %}

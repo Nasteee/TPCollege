@@ -6,19 +6,13 @@
 
 {% block container %}
 
+
     <div class="row">
-        {% for matiere in matieres %}
-
-            <div class="card col-md-2" >
-                <div class="card-body">
-                    <h5 class="card-title">{{ matiere.nom }} </h5>
-                    <a href="infosmatiere.php?id={{ matiere.id }}" class="btn btn-primary">Plus d'infos</a>
-                </div>
-            </div>
-
-        {% endfor %}
+        <div class="list-group">
+            {% for matiere in matieres %}
+                <a href="infosmatiere.php?id={{ matiere.id }}" class="list-group-item list-group-item-action">{{ matiere.nom }} </a>
+            {% endfor %}
+        </div>
     </div>
-
-
 
 {% endblock %}

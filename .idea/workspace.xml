@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf94e37-54ca-4898-bc80-b2e7cc6ef713" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/baseinfos.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/baselist.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/test.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/infoscours.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/infoscours.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/infoseval.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/infoseval.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/classes.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/classes.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cours.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cours.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eleves.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eleves.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/evaluations.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/evaluations.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infosclasse.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infosclasse.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infoscours.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infoscours.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infoseleve.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infoseleve.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infoseval.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infoseval.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infosmatiere.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infosmatiere.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/infosprof.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/infosprof.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/matieres.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matieres.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/professeurs.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/professeurs.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +113,7 @@
       <workItem from="1628782649535" duration="2411000" />
       <workItem from="1628785089191" duration="223000" />
       <workItem from="1628785356973" duration="180000" />
-      <workItem from="1628785557693" duration="1659000" />
+      <workItem from="1628785557693" duration="7947000" />
     </task>
     <servers />
   </component>

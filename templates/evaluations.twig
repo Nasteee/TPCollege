@@ -6,18 +6,16 @@
 
 {% block container %}
 
-    <div class="row">
-        {% for evaluation in evaluations %}
 
-            <div class="card col-md-2" >
-                <div class="card-body">
-                    <h5 class="card-title">{{ evaluation.nom }}</h5>
-                    <a href="infoseval.php?id={{ evaluation.id }}" class="btn btn-primary">Plus d'infos</a>
-                </div>
+        <div class="row">
+            <div class="list-group">
+                {% for evaluation in evaluations %}
+                    <a href="infoseval.php?id={{ evaluation.id }}" class="list-group-item list-group-item-action">{{ evaluation.nom }}</a>
+                {% endfor %}
             </div>
+        </div>
 
-        {% endfor %}
-    </div>
+
 
 
 

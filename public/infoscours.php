@@ -11,9 +11,6 @@ $matiere = $coursManager->getMatiere($_GET['id']);
 $profsClasses = $coursManager->getEnseigner($_GET['id']);
 $evaluations = $coursManager->getEvaluation($_GET['id']);
 
-var_dump($evaluations);
-
-
 
 echo $twig->render('infoscours.twig',
     [

@@ -6,19 +6,14 @@
 
 {% block container %}
 
+
     <div class="row">
-        {% for classe in classes %}
-
-            <div class="card col-md-2" >
-                <div class="card-body">
-                    <h5 class="card-title">{{ classe.nom }}</h5>
-                    <a href="infosclasse.php?id={{ classe.id }}" class="btn btn-primary">Plus d'infos</a>
-                </div>
-            </div>
-
-        {% endfor %}
+        <div class="list-group">
+            {% for classe in classes %}
+                <a href="infosclasse.php?id={{ classe.id }}" class="list-group-item list-group-item-action">{{ classe.nom }}</a>
+            {% endfor %}
+        </div>
     </div>
-
 
 
 {% endblock %}
