@@ -17,10 +17,10 @@
 
             {% block dataOnglet1 %}
 
-                <p class="card-text">Date de naissance : {{ eleve.dateNaissance | date('d/m/Y') }}</p>
-                <p class="card-text">Adresse : {{ eleve.adresse }}</p>
+{#                <p class="card-text">Date de naissance : {{ eleve.dateNaissance | date('d/m/Y') }}</p>#}
+{#                <p class="card-text">Adresse : {{ eleve.adresse }}</p>#}
                 <p class="card-text">Email : {{ eleve.email }}</p>
-                <p class="card-text">Telephone : {{ eleve.telephone }}</p>
+{#                <p class="card-text">Telephone : {{ eleve.telephone }}</p>#}
 
             {% endblock %}
 
@@ -40,31 +40,32 @@
                 {% else %}
                     <p>Nom du Parrain : {{ parrain.prenom }} {{ parrain.nom }} </p>
                 {% endif %}
-                <p>A été evalué : {{ infos }}  </p>
+                <p>A été evalué : {{ eleve.evaluations is empty ? 'Non' : 'Oui' }}  </p>
 
-                {% if evaluations %}
+                {% if eleve.evaluations %}
 
-                    <table>
+                    <table class="table">
                     <thead>
-                    <td>Evaluations</td>
-                    <td>Professeurs</td>
-                    <td>Dates</td>
-                    <td>Note</td>
+                    <th scope="col">Evaluations</th>
+                    <th scope="col">Professeurs</th>
+                    <th scope="col">Dates</th>
+                    <th scope="col">Note</th>
 
                     </thead>
+                    <tbody>
 
-                    {% for evaluation in evaluations %}
+                    {% for evaluation in eleve.evaluations %}
                         <tr>
 
-                            <td>{{ evaluation.nomEval }}</td>
-                            <td>{{ evaluation.nomProf }} {{ evaluation.prenomProf }} </td>
+                            <td>{{ evaluation.label }}</td>
+                            <td>{{ evaluation.professor.nom }} {{ evaluation.professor.prenom }} </td>
                             <td>{{ evaluation.date }}</td>
                             <td>{{ evaluation.note }} / 20</td>
 
                         </tr>
                     {% endfor %}
                 {% endif %}
-
+                </tbody>
                 </table>
 
             {% endblock %}

@@ -8,6 +8,10 @@
     {% endblock %}
 
     <div class="row">
+        {% macro for(tableau, value) %}
+            {% for {{ value }} in {{ tableau }} %}
+        {% endmacro %}
+
         {% for moncours in cours %}
 
             <div class="card col-md-2" >
